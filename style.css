@@ -1,0 +1,136 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(233, 0, 97);
+}
+
+li {
+    display: inline-block;
+}
+  
+li a {
+    display: flex;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 6px 18px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+
+li .active{
+    background-color: white;
+    color: rgb(233, 0, 97);
+}
+
+.skip {
+    background-color: rgb(233, 0, 97);
+    color: #fff;
+    font-weight: 700;
+    left: 50%;
+    padding: 4px;
+    position: absolute;
+    transform: translateY(-100%);
+}
+  
+.skip:focus {
+    transform: translateY(0%);
+}
+
+h1{
+    font-family: 'Poppins', sans-serif; 
+    color: black;
+    font-size: 24px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+p{
+    font-family: 'Poppins', sans-serif; 
+    color: black;
+    font-size: 10px;
+    padding-top: 10px;
+}
+
+header{
+    background: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Poppins', sans-serif; 
+    color: black;
+    text-align: center;
+    font-size: 21.5px;
+    font-weight: bold;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: repeat(7, auto);
+    grid-row-gap: 15px;
+}
+
+.memo-one{
+    top: -100;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    padding: 0px 4px 6px 12px;
+    border: 2px solid black;
+    background-color: rgba(233, 0, 97, 0.13);
+}
+
+.memo-two{
+    top: -100;
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    padding: 0px 4px 6px 12px;
+    border: 2px solid black;
+    background-color: rgba(233, 0, 97, 0.13);
+}
+
+.toni-morrison{
+    top: -100;
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+    padding: 0px 4px 6px 12px;
+    border: 2px solid black;
+    background-color: rgba(233, 0, 97, 0.13);
+}
+
+.white-paper{
+    top: -100;
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 1;
+    padding: 0px 4px 6px 12px;
+    border: 2px solid black;
+    background-color: rgba(233, 0, 97, 0.13);
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif; 
+    color: black;
+    font-size: 14px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+div a{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 10px;
+    font-size: 10px;
+}
+
+footer{
+    background: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Poppins', sans-serif; 
+    color: black;
+    font-size: 10px;
+    text-align: center;
+    border-top: 2px solid black;
+}
