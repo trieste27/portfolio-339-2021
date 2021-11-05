@@ -230,6 +230,36 @@ div.post9{
     grid-row: 4 / span 1;
 }
 
+.about_me{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-row-gap: 30px;
+}
+
+.about-text{
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    padding: 0px 4px 6px 12px;
+    border: 2px solid black;
+    color: white;
+    text-align: center;
+}
+
+.resume-link{
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 2;
+    padding: 4px 1px 1px 1px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.headshot{
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+    border: 2px solid black;
+}
+
 footer{
     background: white;
     padding-top: 10px;
