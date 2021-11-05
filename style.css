@@ -24,6 +24,7 @@ li a {
 li .active{
     background-color: white;
     color: rgb(233, 0, 97);
+    text-transform: uppercase;
 }
 
 .skip {
@@ -122,6 +123,18 @@ div a{
     font-family: 'Poppins', sans-serif;
     padding-top: 10px;
     font-size: 10px;
+}
+
+#Digital_1, #Digital_2, #Digital_3, #MTB_1, #MTB_2, #Print_1, #Print_2{
+    border: 5px solid black;
+    margin: 10px 10px 10px 10px;
+    width: 200px;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 footer{
