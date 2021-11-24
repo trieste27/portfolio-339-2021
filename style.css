@@ -1,14 +1,15 @@
-ul{
+/* ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    margin-top: 10px;
     overflow: hidden;
     background-color: rgb(233, 0, 97);
 }
 
 li {
     display: inline-block;
-}
+} */
   
 li a {
     display: flex;
@@ -17,7 +18,16 @@ li a {
     text-align: center;
     padding: 6px 18px;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 30px;
+}
+
+.nav_links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(233, 0, 97);
+    justify-content: space-around;
+    padding-top: 10px;
 }
 
 li .active{
@@ -26,11 +36,13 @@ li .active{
     text-transform: uppercase;
 }
 
-.skip {
+a.skip {
     background-color: rgb(233, 0, 97);
     color: #fff;
-    font-weight: 700;
-    left: 50%;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
     padding: 4px;
     position: absolute;
     transform: translateY(-100%);
@@ -50,7 +62,7 @@ h1{
 
 p{
     font-family: 'Poppins', sans-serif; 
-    color: black;
+    color: white;
     font-size: 15px;
     padding-top: 10px;
 }
@@ -62,8 +74,8 @@ header{
     font-family: 'Poppins', sans-serif; 
     color: black;
     text-align: center;
-    font-size: 21.5px;
-    font-weight: bold;
+    font-size: 25px;
+    font-weight: bolder;
 }
 
 p.about-text, .resume-link, img.headshot{
@@ -109,7 +121,7 @@ a#resume-link{
     border-radius: 10px;
     /*width: 100%;
     position: relative; */
-} 
+}
 
 div.headshot-container{
     border: solid 30px rgb(233, 0, 97); 
@@ -117,12 +129,6 @@ div.headshot-container{
     margin: 0px 30px 30px 30px; 
 }
 
-@media only screen and (min-width: 850px){
-    img#skip.headshot{
-        width: 100%;
-        height: auto;
-    }
-}
 .container{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -134,9 +140,16 @@ div.headshot-container{
     top: -100;
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
-    padding: 0px 4px 6px 12px;
+    /* padding: 0px 4px 6px 12px;
     border: 2px solid black;
-    background-color: rgba(233, 0, 97, 0.13);
+    background-color: rgba(233, 0, 97, 0.13); */
+    color: white;
+    background-color: rgb(233, 0, 97);
+    padding: 4px 1px 1px 4px;
+    margin: 0px 30px 0px 30px;
+    text-align: left;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
 }
 
 .memo-two{
@@ -144,42 +157,81 @@ div.headshot-container{
     grid-column: 2 / span 1;
     grid-row: 3 / span 1;
     padding: 0px 4px 6px 12px;
-    border: 2px solid black;
-    background-color: rgba(233, 0, 97, 0.13);
+    color: white;
+    background-color: rgb(233, 0, 97);
+    padding: 4px 1px 1px 4px;
+    margin: 0px 30px 0px 30px;
+    text-align: left;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
 }
 
 .toni-morrison{
     top: -100;
     grid-column: 2 / span 1;
     grid-row: 4 / span 1;
-    padding: 0px 4px 6px 12px;
-    border: 2px solid black;
-    background-color: rgba(233, 0, 97, 0.13);
+    color: white;
+    background-color: rgb(233, 0, 97);
+    padding: 4px 1px 1px 4px;
+    margin: 0px 30px 0px 30px;
+    text-align: left;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
 }
 
 .white-paper{
     top: -100;
     grid-column: 2 / span 1;
     grid-row: 5 / span 1;
-    padding: 0px 4px 6px 12px;
-    border: 2px solid black;
-    background-color: rgba(233, 0, 97, 0.13);
+    color: white;
+    background-color: rgb(233, 0, 97);
+    padding: 4px 1px 1px 4px;
+    margin: 0px 30px 0px 30px;
+    text-align: left;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
 }
 
+a.academic-links{
+    font-family: 'Poppins', sans-serif; 
+    color: black;
+    font-size: 10px;
+}
 
-
-div > a{
+/* div > a{
     text-decoration: none;
     font-family: 'Poppins', sans-serif; 
     color: black;
     font-size: 10px;
     padding-top: 10px;
     font-weight: bold;
+} */
+
+.shei-text, .work-text{
+    color: white;
+    background-color: rgb(233, 0, 97);
+    padding: 4px 1px 1px 4px;
+    margin: 0px 30px 0px 30px;
+    text-align: center;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+}
+
+.academic-text{
+    color: rgb(233, 0, 97);
+    background-color: white;
+    padding: 4px 1px 1px 4px;
+    margin: 0px 30px 0px 30px;
+    text-align: center;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
 }
 
 h2 {
     font-family: 'Poppins', sans-serif; 
-    color: black;
+    color: white;
+    font-weight: bolder;
+    text-decoration: underline;
     font-size: 14px;
     padding-top: 10px;
     font-weight: bold;
@@ -192,7 +244,7 @@ h2 {
     font-size: 10px;
 }
 
-#Digital_1, #Digital_2, #Digital_3, #MTB_1, #MTB_2, #Print_1, #Print_2{
+#Digital_1, #Digital_2, #Digital_3, #MTB_1, #MTB_2, #Print_1, #Print_2, #Print_3, #instagram{
     border: 5px solid black;
     margin: 10px 10px 10px 10px;
     width: 200px;
@@ -288,9 +340,9 @@ div.post9{
     grid-row: 4 / span 1;
 }
 
-footer{
+footer > p{
     background: white;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     padding-bottom: 10px;
     font-family: 'Poppins', sans-serif; 
     color: black;
