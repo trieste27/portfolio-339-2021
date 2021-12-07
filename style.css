@@ -119,13 +119,13 @@ div.headshot-container{
 .container{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: repeat(6, auto);
+    grid-template-rows: repeat(8, auto);
     grid-row-gap: 15px;
 }
 
 .memo-one{
     top: -100;
-    grid-column: 2 / span 1;
+    grid-column: 1 / span 3;
     grid-row: 2 / span 1;
     /* padding: 0px 4px 6px 12px;
     border: 2px solid black;
@@ -141,8 +141,22 @@ div.headshot-container{
 
 .memo-two{
     top: -100;
-    grid-column: 2 / span 1;
+    grid-column: 1 / span 3;
     grid-row: 3 / span 1;
+    padding: 0px 4px 6px 12px;
+    color: white;
+    background-color: rgb(233, 0, 97);
+    padding: 4px 1px 1px 4px;
+    margin: 0px 30px 0px 30px;
+    text-align: left;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+}
+
+.memo-three{
+    top: -100;
+    grid-column: 1 / span 3;
+    grid-row: 4 / span 1;
     padding: 0px 4px 6px 12px;
     color: white;
     background-color: rgb(233, 0, 97);
@@ -155,8 +169,8 @@ div.headshot-container{
 
 .toni-morrison{
     top: -100;
-    grid-column: 2 / span 1;
-    grid-row: 4 / span 1;
+    grid-column: 1 / span 3;
+    grid-row: 5 / span 1;
     color: white;
     background-color: rgb(233, 0, 97);
     padding: 4px 1px 1px 4px;
@@ -168,8 +182,8 @@ div.headshot-container{
 
 .white-paper{
     top: -100;
-    grid-column: 2 / span 1;
-    grid-row: 5 / span 1;
+    grid-column: 1 / span 3;
+    grid-row: 6 / span 1;
     color: white;
     background-color: rgb(233, 0, 97);
     padding: 4px 1px 1px 4px;
@@ -181,8 +195,119 @@ div.headshot-container{
 
 a.academic-links{
     font-family: 'Poppins', sans-serif; 
-    color: black;
-    font-size: 10px;
+    color: rgb(233, 0, 97);
+    font-weight: bolder;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+fieldset.academic-buttons{
+    text-align: center;
+}
+
+button{
+    border-radius: 10px;
+    border: none;
+}
+
+@media screen and (min-width: 600px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 16em);
+        grid-row-gap: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .memo-one{
+        top: -100;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        margin: 0px 8px 0px 30px;
+        overflow: scroll;
+    
+    }
+    .memo-two{
+        top: -100;
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        margin: 0px 30px 0px 8px;
+        overflow: scroll; 
+    }
+
+    .memo-three{
+        top: -100;
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        margin: 0px 8px 0px 30px;
+        overflow: scroll; 
+    }
+
+    .toni-morrison{
+        top: -100;
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+        margin: 0px 30px 0px 8px;
+        overflow: scroll; 
+    }
+
+    .white-paper{
+        top: -100;
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+        margin: 0px 8px 0px 30px;
+        overflow: scroll; 
+    }
+}
+
+@media screen and (min-width: 1080px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 11em);
+        grid-row-gap: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .memo-one{
+        top: -100;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+        margin: 0px 8px 0px 30px;
+        overflow: hidden;
+    }
+
+    .memo-two{
+        top: -100;
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 2;
+        margin: 0px 30px 0px 8px;
+        overflow: hidden;
+    }
+
+    .memo-three{
+        top: -100;
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 2;
+        margin: 0px 8px 0px 30px;
+        overflow: hidden;
+    }
+
+    .toni-morrison{
+        top: -100;
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+        margin: 0px 30px 0px 8px;
+        overflow: hidden;
+    }
+
+    .white-paper{
+        top: -100;
+        grid-column: 2 / span 1;
+        grid-row: 4 / span 1;
+        margin: 0px 30px 0px 8px;
+        overflow: hidden;
+    }   
 }
 
 /* div > a{
@@ -236,9 +361,16 @@ h2 {
 }
 
 #Digital_1, #Digital_2, #Digital_3, #MTB_1, #MTB_2, #Print_1, #Print_2, #Print_3 {
-    border: 5px solid black;
+    box-shadow: 0px 0px 0px 5px black;
+    transition: box-shadow 0.3s linear; 
+    /* margin: 0.5em; */
     margin: 10px 10px 10px 10px;
     width: 200px;
+}
+
+#Digital_1:hover, #Digital_2:hover, #Digital_3:hover, #MTB_1:hover, #MTB_2:hover, #Print_1:hover, #Print_2:hover, #Print_3:hover{
+    filter: opacity(50%);
+    box-shadow: 0px 0px 0px 10px rgb(233, 0, 97);
 }
 
 .gallery{
