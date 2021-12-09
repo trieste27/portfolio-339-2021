@@ -65,24 +65,49 @@ header{
     font-weight: bolder;
 }
 
-p.about-text, .resume-link, .headshot-container, .form-container{
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(5, auto);
-    grid-row-gap: 30px; */
-    
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center; */
+@keyframes grow{
+    from {width: 50% ;}
+    to {width: 80% ;}
+}
 
+#logo-main{
+    animation-name: grow;
+    animation-duration: 3s;
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    #logo-main{
+        animation:none;
+    }
+}
+
+body, html {
+    height: 100%;
+}
+  
+.parallax {
+    /* The image used */
+    background-image: url("imgs/parallax.jpg");
+  
+    /* Full height */
+    height: 25%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-bottom: 30px;
+}
+
+/* p.about-text, .resume-link, .headshot-container, .form-container{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 a#resume-link{
-    /* grid-column: 3 / span 1;
-    grid-row: 2 / span 1; */
     color: white;
     font-family: 'Poppins', sans-serif; 
     background-color: rgb(233, 0, 97);
@@ -90,15 +115,9 @@ a#resume-link{
     margin: 20px 20px 20px 0px;
     border-radius: 10px;
     font-size: 15px;
-    /* border: 2px solid black; */
-    /* text-align: center; */
 }
 
 .about-text{
-    /* grid-column: 1 / span 2;
-    grid-row: 1 / span 1;
-    padding: 0px 4px 6px 12px;
-    color: white; */
     color: white;
     background-color: rgb(233, 0, 97);
     padding: 4px 1px 1px 4px;
@@ -106,14 +125,417 @@ a#resume-link{
     text-align: center;
     padding: 10px 30px 10px 30px;
     border-radius: 10px;
-    /*width: 100%;
-    position: relative; */
 }
 
 div.headshot-container{
     border: solid 30px rgb(233, 0, 97); 
     border-radius: 10px;
     margin: 0px 30px 30px 30px; 
+} */
+
+main.about_me{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 16em);
+    grid-row-gap: 15px;
+    grid-column-gap: 10px;
+    margin-bottom: 30px;
+}
+
+div#main {
+    top: -100;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    background-color:rgb(233, 0, 97);
+    border-radius: 10px;
+    margin: 0px 20px 0px 20px;
+}
+
+p#about-text{
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+div.resume-link{
+    top: -100;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    margin: 60px 10px 10px 50px;
+    /* padding-top: 4px; */
+}
+
+a#resume-link{
+    background-color:rgb(233, 0, 97);
+    border-radius: 10px;
+    font-size: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 20px 20px 20px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+div.linkedin-link{
+    top: -100;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    margin: 130px 10px 10px 50px;
+    padding-top: 30px;
+}
+
+a#linkedin-link{
+    background-color:rgb(233, 0, 97);
+    border-radius: 10px;
+    font-size: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 20px 20px 20px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.form-container{
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+    /* margin: 50px 10px 0px 20px;
+    padding-top: 4px; */
+    padding: 0px 20px 20px 20px;
+
+}
+
+a#resume-link:hover, a#linkedin-link:hover{
+    opacity: 75%;
+}
+
+div.headshot-container{
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    padding-right: 20px;
+    margin-top: 45px;
+}
+
+.headshot{
+    border: solid 10px rgb(233, 0, 97); 
+    border-radius: 10px;
+}
+
+/* CONTACT FORM */
+/* GENERAL APPEARANCE */
+html, body, h1, form, fieldset.form, legend, ol, li {
+	margin: 0;
+	padding-left: 10px;
+    color: white;
+	font-family: 'Poppins', sans-serif;
+}
+
+legend {
+    text-align: center;
+}
+
+body {
+	background: #ffffff;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	padding: .5%;
+}
+
+form{
+	background: rgb(233, 0, 97);
+	-moz-border-radius: 2%;
+	-webkit-border-radius: 2%;
+	border-radius: 2%;
+	width: 100%;
+    height: 90%;
+}
+
+ol{
+	list-style-type: none;
+}
+
+/* Style the list items*/
+form ol li {
+	background: rgb(233, 0, 97);
+	background: rgb(233, 0, 97);
+	/* border-color: rgba(143, 97, 97, 0.6); */
+	border-style: solid;
+	/* border-width: .5%; */
+	-moz-border-radius: 2%;
+	-webkit-border-radius: 2%;
+	border-radius: 10px;	
+	margin-bottom: .5%;
+}
+
+input#name, input#email, textarea#submission, .buttons{
+    text-align: center;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 600px){
+    main.about_me{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 16em);
+        grid-row-gap: 15px;
+        grid-column-gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    div#main {
+        top: -100;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        background-color:rgb(233, 0, 97);
+        border-radius: 10px;
+        margin: 0px 10px 0px 10px;
+        overflow: scroll;
+    }
+    
+    p#about-text{
+        font-size: 14px;
+        /* padding: 10px 10px 10px 10px; */
+        text-align: center;
+    }
+    
+    div.resume-link{
+        top: -100;
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        margin: 60px 80px 10px 100px;
+        /* padding-top: 4px; */
+    }
+    
+    a#resume-link{
+        background-color:rgb(233, 0, 97);
+        border-radius: 10px;
+        font-size: 20px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        padding: 30px 30px 30px 30px;
+        font-weight: bolder;
+        text-decoration: none;
+    }
+    
+    div.linkedin-link{
+        top: -100;
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        margin: 150px 80px 10px 100px;
+        padding-top: 30px;
+    }
+    
+    a#linkedin-link{
+        background-color:rgb(233, 0, 97);
+        border-radius: 10px;
+        font-size: 20px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        padding: 30px 30px 30px 30px;
+        font-weight: bolder;
+        text-decoration: none;
+    }
+    
+    .form-container{
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        /* margin: 50px 10px 0px 20px;
+        padding-top: 4px; */
+        padding: 0px 10px 0px 9px;
+    
+    }
+    
+    div.headshot-container{
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+        padding-top: 5px;
+    }
+    
+    img.headshot{
+        border: solid 10px rgb(233, 0, 97); 
+        border-radius: 10px;
+        width: auto;
+        height: auto;
+    }
+
+        /* CONTACT FORM */
+    /* GENERAL APPEARANCE */
+    html, body, h1, form, fieldset.form, legend, ol, li {
+        margin: 0;
+        padding-left: 3px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        /* overflow: scroll; */
+    }
+
+    legend{
+        font-size: 10px;
+    }
+    body {
+        background: #ffffff;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        /* padding: .5%; */
+    }
+
+    form{
+        background: rgb(233, 0, 97);
+        /* -moz-border-radius: 2%;
+        -webkit-border-radius: 2%;
+        border-radius: 2%; */
+        width: 100%;
+        height: 100%;
+    }
+
+    ol{
+        list-style-type: none;
+    }
+
+    /* Style the list items*/
+    form ol li {
+        background: rgb(233, 0, 97);
+        /* border-color: rgba(143, 97, 97, 0.6); */
+        border-style: solid;
+        /* border-width: .5%; */
+        -moz-border-radius: 2%;
+        -webkit-border-radius: 2%;
+        border-radius: 10px;	
+        margin-bottom: .5%;
+    }
+
+    input#name, input#email, textarea#submission, .buttons{
+        text-align: left;
+        border-radius: 5px;
+        font-size: 10px;
+    }
+
+    form#contact{
+        width: 100%;
+        height: 100%;
+    }
+
+    .buttons{
+       text-align: center;
+    }
+
+    fieldset.buttons{
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1080px){
+    main.about_me{
+        /* display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-row-gap: 30px; */
+        
+        /* display: flex;
+        flex-wrap: wrap;
+        justify-content: center; */
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    a#resume-link, a#linkedin-link{
+        /* grid-column: 3 / span 1;
+        grid-row: 2 / span 1; */
+        color: white;
+        font-family: 'Poppins', sans-serif; 
+        background-color: rgb(233, 0, 97);
+        /* padding: 10px 10px 10px 10px; */
+        /* margin: 20px 20px 20px 0px; */
+        border-radius: 10px;
+        /* font-size: 15px; */
+        /* border: 2px solid black; */
+        /* text-align: center; */
+    }
+
+    div.linkedin-link{
+        margin: 20px 0px 50px 20px;
+    }
+    
+    .about-text{
+        /* grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+        padding: 0px 4px 6px 12px;
+        color: white; */
+        color: white;
+        background-color: rgb(233, 0, 97);
+        padding: 4px 1px 1px 4px;
+        margin: 0px 30px 0px 30px;
+        text-align: center;
+        padding: 10px 30px 10px 30px;
+        border-radius: 10px;
+        /*width: 100%;
+        position: relative; */
+    }
+    
+    div.headshot-container{
+        border: solid 30px rgb(233, 0, 97); 
+        border-radius: 10px;
+        margin: 0px 30px 30px 30px; 
+        width: 50%;
+        justify-content: center;
+    }
+
+        /* CONTACT FORM */
+    /* GENERAL APPEARANCE */
+    html, body, h1, form, fieldset, legend, ol, li {
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    legend {
+        text-align: center;
+    }
+
+    body {
+        background: #ffffff;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        padding: .5%;
+    }
+
+    form{
+        background: rgb(233, 0, 97);
+        -moz-border-radius: 2%;
+        -webkit-border-radius: 2%;
+        border-radius: 2%;
+        padding: 2%;
+        width: 80%;
+    }
+
+    ol{
+        list-style-type: none;
+    }
+
+    /* Style the list items*/
+    form ol li {
+        background: rgb(233, 0, 97);
+        background: rgb(233, 0, 97);
+        /* border-color: rgba(143, 97, 97, 0.6); */
+        border-style: solid;
+        /* border-width: .5%; */
+        -moz-border-radius: 2%;
+        -webkit-border-radius: 2%;
+        border-radius: 10px;	
+        margin-bottom: .5%;
+    }
+
+    .form-container{
+        padding-bottom: 20px;
+        width: 90%;
+    }
+
+    input#name, input#email, textarea#submission, .buttons{
+        text-align: center;
+        border-radius: 10px;
+    }
+
 }
 
 .container{
@@ -201,13 +623,44 @@ a.academic-links{
     text-decoration: none;
 }
 
-fieldset.academic-buttons{
+/* fieldset.academic-buttons{
     text-align: center;
-}
+} */
 
 button{
     border-radius: 10px;
     border: none;
+}
+
+button:hover{
+    filter: opacity(75%);
+}
+
+fieldset.academic-button1{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+fieldset.academic-button2{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+fieldset.academic-button3{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+fieldset.academic-button4{
+    padding-top: 5px;
+    text-align: center;
+}
+
+fieldset.academic-button5{
+    text-align: center;
 }
 
 @media screen and (min-width: 600px){
@@ -257,6 +710,30 @@ button{
         grid-row: 3 / span 1;
         margin: 0px 8px 0px 30px;
         overflow: scroll; 
+    }
+
+    fieldset.academic-button1{
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    fieldset.academic-button2{
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    fieldset.academic-button3{
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    fieldset.academic-button4{
+        padding-top: 5px;
+        text-align: center;
+    }
+
+    fieldset.academic-button5{
+        text-align: center;
     }
 }
 
@@ -308,6 +785,30 @@ button{
         margin: 0px 30px 0px 8px;
         overflow: hidden;
     }   
+
+    fieldset.academic-button1{
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    fieldset.academic-button2{
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    fieldset.academic-button3{
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    fieldset.academic-button4{
+        padding-top: 5px;
+        text-align: center;
+    }
+
+    fieldset.academic-button5{
+        text-align: center;
+    }
 }
 
 /* div > a{
@@ -575,70 +1076,12 @@ footer > p{
 
 @media (prefers-reduced-motion) {
     .flip-card-inner {
-        transition: transform none;
+        transition: none;
     }
 }  
 
-/* CONTACT FORM */
-/* GENERAL APPEARANCE */
-html, body, h1, form, fieldset, legend, ol, li {
-	margin: 0;
-	padding: 0;
-    color: white;
-	font-family: 'Poppins', sans-serif;
-}
 
-legend {
-    text-align: center;
-}
 
-body {
-	background: #ffffff;
-	color: white;
-	font-family: 'Poppins', sans-serif;
-	padding: .5%;
-}
-
-form{
-	background: rgb(233, 0, 97);
-	-moz-border-radius: 2%;
-	-webkit-border-radius: 2%;
-	border-radius: 2%;
-	padding: 2%;
-	width: 80%;
-}
-
-ol{
-	list-style-type: none;
-}
-
-/* Style the list items*/
-form ol li {
-	background: rgb(233, 0, 97);
-	background: rgb(233, 0, 97);
-	/* border-color: rgba(143, 97, 97, 0.6); */
-	border-style: solid;
-	/* border-width: .5%; */
-	-moz-border-radius: 2%;
-	-webkit-border-radius: 2%;
-	border-radius: 10px;	
-	margin-bottom: .5%;
-}
-
-.form-container{
-    padding-bottom: 20px;
-}
-
-input#name, input#email, textarea#submission, .buttons{
-    text-align: center;
-    border-radius: 10px;
-}
-
-/* form ol ol li {
-	background: none;
-	border: none;
-	float: left;
-} */
 
 @media screen and (min-width: 600px){
     div.headshot-container{

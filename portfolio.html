@@ -24,7 +24,7 @@
 <body>
     <a class = "skip" href="#main">Skip to Main Content</a>
 	<header>
-        <img src="imgs/Hannah's.png" alt="Hannah's Writing Archive" id = "logo">
+        <img src="imgs/Hannah's.png" alt="Hannah's Writing Archive" id = "logo-main">
 	<nav>
 		<ul class = "nav_links">
 			<li><a class="active" href = "portfolio.html">About Me</a></li>
@@ -37,25 +37,34 @@
 		<h1>Welcome!</h1>
 
 	</header>
+    <div class = "parallax"></div>
+
 </body>
 
-<main class="about_me" id = "main">
+    <main class="about_me">
             
-    <div>
-        <p class = "about-text">My name is Hannah and I'm a junior studying User Experience Design at the University of Michigan's School of Information, with a minor in Public Policy at the Ford School. 
+    <!-- <div>
+        <img class="parallax" src="imgs/parallax.jpg" alt="Pink Patterned Blanket" />
+    </div> -->
+    
+    <div id = "main">
+        <p id = "about-text">My name is Hannah and I'm a junior studying User Experience Design at the University of Michigan's School of Information, with a minor in Public Policy at the Ford School. 
             On this website you may access my writing for academic courses, SHEI Magazine, and my job at U-M's Center for Academic Innovation. Writing is how I contribute to the campus community and I am proud to present my work on a site I built myself!</p>
     </div>
     <div class="resume-link">
-        <a id = "resume-link" href="https://drive.google.com/file/d/1iRlhYaYZ-HueXSMiT1ZHccXLshiI9Rc5/view?usp=sharing" target="_blank">Resume (Click to view)</a>
+        <a id = "resume-link" href="https://drive.google.com/file/d/1iRlhYaYZ-HueXSMiT1ZHccXLshiI9Rc5/view?usp=sharing" target="_blank">Resume</a>
+    </div>
+    <div class = linkedin-link>
+        <a id = "linkedin-link" href="https://www.linkedin.com/in/hannah-triester-14a691225/" target="_blank">LinkedIn</a>
     </div>
     <div class = headshot-container id="skip">
-        <img class="headshot" src="imgs/headshot.jpg" alt="Headshot of Hannah Triester" /></a>
+        <img class="headshot" src="imgs/headshot.jpg" alt="Headshot of Hannah Triester" />
     </div>
 
     
     <div class = form-container>
         <form  action = "https://formspree.io/f/myyogoer" method = "post" id = "contact">
-            <fieldset>
+            <fieldset class = "form">
                 <legend>Contact Hannah</legend>
                 <ol>
                     <li>
@@ -68,7 +77,7 @@
                     </li>
                     <li>
                         <label for="submission">Talk to me!</label>
-                        <textarea id="submission" name="Submission" placeholder="Write something..." style="height:200px"></textarea>
+                        <textarea id="submission" name="Submission" placeholder="Write something..." style="height:30px"></textarea>
                     </li>
                 </ol>
             </fieldset>
@@ -84,7 +93,7 @@
         <script src="js/form.js"></script>
     </div>
 
-</main>
+    </main>
 
 <footer>
     <p>
