@@ -11,9 +11,9 @@ li a {
     padding: 3px 9px;
     text-decoration: none;
     font-size: 20px;
-    border-top: 2px solid rgb(233, 0, 97);
+    /* border-top: 2px solid rgb(233, 0, 97);
     border-right: 2px solid rgb(233, 0, 97);
-    border-left: 2px solid rgb(233, 0, 97);
+    border-left: 2px solid rgb(233, 0, 97); */
 }
 
 .nav_links{
@@ -52,8 +52,9 @@ a.skip {
 h1{
     font-family: 'Poppins', sans-serif; 
     color: white;
-    font-size: 24px;
-    /* padding-top: 10px; */
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     text-align: center;
     background-color: rgb(233, 0, 97);
 }
@@ -76,14 +77,22 @@ p{
 }
 
 header{
-    background: white;
+    background: rgb(233, 0, 97);
     /* padding-top: 10px; */
-    margin-bottom: 5%;
     font-family: 'Poppins', sans-serif; 
     color: black;
     text-align: center;
     font-size: 25px;
     font-weight: bolder;
+}
+
+.about-header{
+    margin-bottom: 5%;
+
+}
+
+img#logo-main{
+    max-width: 85%;
 }
 
 /* @keyframes grow{
@@ -866,11 +875,18 @@ fieldset.academic-button5{
 .shei-text, .work-text{
     color: white;
     background-color: rgb(233, 0, 97);
-    padding: 4px 1px 1px 4px;
+    /* padding: 4px 1px 1px 4px;
     margin: 0px 30px 0px 30px;
     text-align: center;
     padding: 10px 30px 10px 30px;
-    border-radius: 10px;
+    border-radius: 10px; */
+    font-size: 16px;
+    /* padding: 10px 10px 10px 10px; */
+    text-align: left;
+    /* padding: 20px 60px 10px 60px; */
+    padding-left: 20%;
+    padding-right: 20%;
+    line-height: 1.8em;
 }
 
 .academic-text{
@@ -893,6 +909,16 @@ h2 {
     font-weight: bold;
 }
 
+main.gallery-main{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(233, 0, 97);
+    padding-top: 10px;
+}
+
 .gallery a{
     font-family: 'Poppins', sans-serif;
     color: white;
@@ -905,18 +931,120 @@ h2 {
     transition: box-shadow 0.3s linear; 
     margin: 10px 10px 10px 10px;
     width: 200px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 #Digital_1:hover, #Digital_2:hover, #Digital_3:hover, #MTB_1:hover, #MTB_2:hover, #Print_1:hover, #Print_2:hover, #Print_3:hover{
     filter: opacity(50%);
-    box-shadow: 0px 0px 0px 10px rgb(233, 0, 97);
+    box-shadow: 0px 0px 0px 5px white;
 }
 
-.gallery{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 250px;
+    /* border: 5px solid black; */
+    perspective: 1000px;
+    margin-left: 20%; 
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
+    
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 105%;
+    text-align: center;
+    transition: transform 1.0s;
+    transform-style: preserve-3d;
+    border: 5px solid black;
+}
+    
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+    
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+    
+.flip-card-front {
+    background-color: white;
+}
+    
+.flip-card-back {
+    background-color: white;
+    transform: rotateY(180deg);
+    overflow: scroll;
+}
+    
+.flip-instagram{
+        color: rgb(233, 0, 97);
+        font-size: 12px;
+        text-align: left;
+        padding: 20px 20px 20px 20px;
+}
+    
+a#flip-link{
+        color: rgb(233, 0, 97);
+        font-family: 'Poppins', sans-serif; 
+        font-size: 14px;
+        font-weight: bold;
+}
+      
+      
+#flip-link:focus-within .flip-card-inner{
+          transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion) {
+    .flip-card-inner {
+        transition: none;
+    }
+}
+
+@media screen and (min-width: 820px){
+
+    main.gallery-main{
+        background-color:rgb(233, 0, 97);
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(1, auto);
+        padding-bottom: 20px;
+    }
+
+    .shei-left-column{
+        grid-column: 1 / span 1;
+    }
+
+    .gallery{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        color:rgb(233, 0, 97);
+        padding-top: 10px;
+        grid-column: 2 / span 1;
+    }
+
+    .shei-left-column{
+        background-color:rgb(233, 0, 97);
+    }
+
+    #skip.gallery{
+        background-color:rgb(233, 0, 97);
+    }
+    
+}  
 
 .blog{
     display: grid;
@@ -1054,6 +1182,9 @@ footer {
     /* background-image: url("imgs/parallax.jpg"); */
     /* height: 2.5%; */
     border-top: 1px solid white;
+    font-weight: bold;
+    background-color:rgb(233, 0, 97);
+    padding-bottom: 10px;
 /* 
     background-attachment: fixed;
     background-position: center;
@@ -1071,64 +1202,7 @@ footer > p{
     /* border-top: 2px solid black; */
 }
 
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 310px;
-  border: 5px solid black;
-  perspective: 1000px; 
-  margin-bottom: 20px;
-}
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 1.0s;
-  transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: white;
-}
-
-.flip-card-back {
-  background-color: rgb(233, 0, 97);
-  transform: rotateY(180deg);
-  overflow: scroll;
-}
-
-.flip-instagram {
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    text-align: left;
-    padding: 20px 20px 20px 20px;
-}
-
-
-#flip-link:focus-within .flip-card-inner{
-    transform: rotateY(180deg);
-}
-
-@media (prefers-reduced-motion) {
-    .flip-card-inner {
-        transition: none;
-    }
-}  
 
 /* @media screen and (min-width: 600px){
     div.headshot-container{
