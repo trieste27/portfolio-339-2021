@@ -726,6 +726,7 @@ input#name, input#email, textarea#submission, button.submit-button, button.reset
     text-align: left;
     padding: 10px 30px 30px 30px;
     border-radius: 10px;
+    overflow: scroll;
 }
 
 .memo-one, .memo-two, .memo-three, .op-ed, .toni-morrison, .white-paper{
