@@ -74,6 +74,10 @@ p{
     font-weight: bolder;
 }
 
+span.boldText{
+    color: white;
+}
+
 .boldText a:hover, .boldText a:visited{
     text-decoration: none;
     color: white;
