@@ -72,16 +72,13 @@ p{
 .boldText a{
     text-decoration: none;
     font-weight: bolder;
-}
-
-span.boldText{
     color: white;
 }
 
-/* .boldText a:hover, .boldText a:visited{
+.boldText a:hover, .boldText a:visited{
     text-decoration: none;
     color: white;
-} */
+}
 
 header{
     background: rgb(233, 0, 97);
