@@ -319,7 +319,7 @@ input#name, input#email, textarea#submission, button.submit-button, button.reset
 .memo-one{
     top: -100;
     grid-column: 1 / span 3;
-    grid-row: 2 / span 1;
+    grid-row: 3 / span 1;
     color: rgb(233, 0, 97);
     background-color: white;
     padding: 4px 1px 1px 4px;
@@ -333,7 +333,7 @@ input#name, input#email, textarea#submission, button.submit-button, button.reset
 .memo-two{
     top: -100;
     grid-column: 1 / span 3;
-    grid-row: 3 / span 1;
+    grid-row: 2 / span 1;
     padding: 0px 4px 6px 12px;
     color: rgb(233, 0, 97);
     background-color: white;
