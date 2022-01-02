@@ -568,11 +568,9 @@ fieldset.academic-button6{
 .shei-text{
     color: white;
     background-color: rgb(233, 0, 97);
-    font-size: 16px;
-    text-align: left;
+    text-align: center;
     padding-left: 12%;
     padding-right: 12%;
-    line-height: 1.8em;
 }
 
 .academic-text, .work-text{
@@ -730,6 +728,9 @@ a#flip-link{
     .shei-text{
         padding-left: 20%;
         padding-right: 20%;
+        text-align: left;
+        font-size: 16px;
+        line-height: 1.8em;
     }
 
     #shei-h1{
